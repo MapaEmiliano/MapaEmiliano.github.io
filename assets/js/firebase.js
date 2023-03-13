@@ -92,7 +92,7 @@
 
         updateProfile(auth.currentUser, { displayName: username.value })
 
-
+        window.location = 'pages/home.html';
         // ...
         })
         .catch((error) => {
