@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- start: Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- start: Icons -->
+    <!-- start: CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- end: CSS -->
+    <title>Mapa-Emiliano</title>
+</head>
+
+<body>
+
+    <!-- start: Sidebar -->
+    <div class="sidebar position-fixed top-0 bottom-0 bg-main border-end ">
+        <div class="d-flex align-items-center p-3 text-light">
+            <a href="#" class="sidebar-logo text-uppercase fw-bold text-decoration-none text-light fs-4">Mapa-Emilano</a>
+            <i class="sidebar-toggle bi-map-fill ms-auto fs-5 d-none d-md-block"></i>
+        </div>
+        <ul class="sidebar-menu p-3 mb-5">
+            <li class="sidebar-menu-item">
+                <a href="home.html" class="fw-bold">
+                    <i class="bi-house sidebar-menu-item-icon"></i>
+                    HOME
+                </a>
+            </li>
+            <li class="sidebar-menu-item active">
+                <a href="#" class="list-group-item fw-bold pe-none w-100"><i class=" fa-sm sidebar-menu-item-icon">B5</i> <span class="d-none d-sm-inline"> Building Five</span></a>
+            </li>
+            <hr style="color: white;">
+
+            <li class="sidebar-menu-item has-dropdown ">
+                <a href="#">
+                    <i class="sidebar-menu-item-icon">F1</i>
+                    First Floor
+                    <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                </a>
+                <ul class="sidebar-dropdown-menu">
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Radiological Tech. Lab.
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Nutrition Lab.
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Biology Lab.
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Zoology Lab.
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item ">
+                        <a href="B5.html" class="locate">
+                            Chemistry Lab.
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Physics Lab.
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            
+            <li class="sidebar-menu-item has-dropdown">
+                <a href="#" class="foor">
+                    <i class="sidebar-menu-item-icon">F2</i>
+                    Second Floor
+                    <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                </a>
+                <ul class="sidebar-dropdown-menu">
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5201
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5202
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5203
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5204
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item ">
+                        <a href="B5.html" class="locate">
+                            Room 5205
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5206
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5207
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5208
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Room 5209
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item ">
+                        <a href="B5.html" class="locate">
+                            Room 5210
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+           
+            
+            
+
+    </div>
+    <div class="sidebar-overlay"></div>
+    <!-- end: Sidebar -->
+
+    <!-- start: Main -->
+    <main class="bg-light">
+        <div class="p-2">
+            <!-- start: Navbar -->
+            <nav class="px-3 py-2 bg-main rounded shadow d-flex">
+                <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                <h5 class="fw-bold mb-0 me-auto text-light">Interactive School Map</h5>
+
+                <div class="d-flex mode">
+                    <button type="button" class="active btn btn-sm me-2 text-light" data-bs-target="iframe" id="show-btn">
+                        <i class="fa-solid">2D</i>
+                    </button>
+                    <button type="button" class="btn btn-sm ms-2 me-2 text-light" data-bs-toggle="modal" data-bs-target="#vtmodal-B5">
+                        <i class="fa-solid">VT</i>
+                    </button>
+  
+                    <button type="button" class="btn btn-sm text-light" data-bs-target="iframe" id="show-btn">
+                        <i class="fa-sharp fa-solid fa-robot"></i>
+                    </button>
+                      <button type="button" class="btn btn-sm ms-2 me-2 volume-btn active text-light" id="volume-btn">
+                      <i class="fa-sharp fa-solid fa-volume-high"></i>
+                  </button>
+                </div>
+            </nav>
+            <!-- end: Navbar -->
+        </div>
+
+
+
+        <!-- <div class="mainCont gx-0">
+            <iframe src="https://jzhmrtn.github.io/" frameborder="0" allowfullscreen width="100%" height="100%"></iframe>
+        </div> -->
+
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="background-color:#fff" viewBox="-0.5 -0.5 3220 1855">
+            <rect x="7.41" y="7" width="3300" height="1927" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-width="15" pointer-events="all"></rect>
+            <path fill="#fff" stroke="#000" stroke-width="2" d="M2868 542.29v246.46h115V542.29z" pointer-events="all"/>
+            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2868 567.29h115m-115 25h115m-115 25h115m-115 25h115m-115 25h115m-115 25h115m-115 25h115m-115 25h115m-115 25h115M2925.5 542.29v246.46m-57.5-25 57.5 25 57.5-25" pointer-events="all"/>
+            <path fill="#fff" stroke="#000" stroke-width="10" d="M2868 94.29h116v330h-116z" pointer-events="all"/>
+            <path stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M238 445.29v-353h2750v353h-10v-343H248v343Z" pointer-events="all"/>
+            <path fill="#fff" stroke="#000" stroke-width="2" d="M2982.44 1536.21v227h-115v-227z" pointer-events="all"/>
+            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2982.44 1561.21h-115m115 25h-115m115 25h-115m115 25h-115m115 25h-115m115 25h-115m115 25h-115m115 25h-115m115 25h-115M2924.94 1536.21v227m57.5-25-57.5 25-57.5-25" pointer-events="all"/>
+            <path fill="#FFF" stroke="#000" stroke-width="10" d="M2864 1016.29h110v269.92h-110z" pointer-events="all"/>
+            <path fill="none" d="M2950.95 1086.37v130h-67.02v-130z" pointer-events="all"/>
+            <switch transform="rotate(90 2917.44 1150.87)">
+              <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1151px;margin-left:2853px">
+                  <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;overflow-wrap:normal">
+                      <font style="font-size:20px">
+                        CR MALE
+                      </font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+            </switch>
+            <path fill="#fff" stroke="#000" stroke-width="2" d="M2875.88 1286.21H2938v-5h-62.12z" pointer-events="all"/>
+            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2938 1281.21c0-34.31-27.81-62.12-62.12-62.12v62.12" pointer-events="all"/>
+            
+            <path fill="#FFF" stroke="#000" stroke-width="10" d="M249.5 1016.37h110v269.92h-110z" pointer-events="none"/>
+            <switch transform="rotate(90 303 1152.87)">
+              <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1153px;margin-left:239px">
+                  <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                      <font style="font-size:20px">
+                        CR FEMALE
+                      </font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+            </switch>
+            <path fill="#fff" stroke="#000" stroke-width="2" d="M261.44 1288.21h62.12v-5h-62.12z" pointer-events="none"/>
+            <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M323.56 1283.21c0-34.31-27.81-62.12-62.12-62.12v62.12" pointer-events="none"/>
+            <path stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M2988 545.29v307H238v-307h10v297h2730v-297Z" pointer-events="none"/>
+            <path stroke="#000" stroke-miterlimit="10" d="M234 1773.29v-770h2750v770Zm10-760v750h2730v-750Z" pointer-events="none"/>
+
+              <!-- RADIOLOGIC TECHNOLOGY LAB -->
+              <g>
+                <path fill="#FFF" stroke="#000" stroke-width="10" d="M368 97.29h250v750H368z" data-bs-toggle="modal" data-bs-target="#modal-radTech" cursor="pointer"/>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M588.48 850.29H468.01v-5h120.47z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M528.24 850.29v-5m0 0c0-33.27 26.97-60.23 60.24-60.23v60.23m-60.24 0c0-33.27-26.96-60.23-60.23-60.23v60.23" pointer-events="none"/>
+                <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:208px;height:1px;padding-top:478px;margin-left:389px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                        <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <span style="font-size:20px">
+                            RADIOLOGIC TECHNOLOGY LAB.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </foreignObject>
+                </switch>
+              </g>
+
+              <!-- NUTRITION LAB. -->
+              <g>
+                <path fill="#FFF" stroke="#000" stroke-width="10" d="M618 95.74h250v750H618z" data-bs-toggle="modal" data-bs-target="#modal-nutriLab" cursor="pointer"/>
+                <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:168px;height:1px;padding-top:477px;margin-left:659px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                        <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">
+                            NUTRITION LAB.
+                          </font>
+                        </div>
+                      </div>
+                    </div>
+                  </foreignObject>
+                </switch>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M839.18 848.29H778v-5h61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M778 843.29c0-33.79 27.39-61.18 61.18-61.18v61.18" pointer-events="none"/>
+              </g>
+              
+              <!-- BIOLOGY LAB. -->
+              <g>
+                <path fill="#FFF" stroke="#000" stroke-width="10" d="M868 97.29h500v750H868z" data-bs-toggle="modal" data-bs-target="#modal-bioLab" cursor="pointer"/>
+                <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:173px;height:1px;padding-top:477px;margin-left:1032px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                        <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">
+                            BIOLOGY LAB.
+                          </font>
+                        </div>
+                      </div>
+                    </div>
+                  </foreignObject>
+                </switch>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M898 850.29h61.18v-5H898z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M959.18 845.29c0-33.79-27.39-61.18-61.18-61.18v61.18" pointer-events="none"/>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M1339.18 850.29H1278v-5h61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1278 845.29c0-33.79 27.39-61.18 61.18-61.18v61.18" pointer-events="none"/>
+              </g>
+
+              <!-- Zoology -->
+              <g>
+                <path fill="#FFF" stroke="#000" stroke-width="10" d="M1368 97.29h500v750h-500z" data-bs-toggle="modal" data-bs-target="#modal-zooLab" cursor="pointer"/>
+                <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:163px;height:1px;padding-top:473px;margin-left:1537px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                        <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">
+                            ZOOLOGY LAB.
+                          </font>
+                        </div>
+                      </div>
+                    </div>
+                  </foreignObject>
+                </switch>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M1397.41 847.29h61.18v-5h-61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1458.59 842.29c0-33.79-27.39-61.18-61.18-61.18v61.18" pointer-events="none"/>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M1838.59 847.29h-61.18v-5h61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1777.41 842.29c0-33.79 27.39-61.18 61.18-61.18v61.18" pointer-events="none"/>
+              </g>
+
+              <!-- CHEMISTRY LAB. -->
+              <g>
+                <path fill="#FFF" stroke="#000" stroke-width="10" d="M1868 97.29h500v750h-500z" data-bs-toggle="modal" data-bs-target="#modal-chemLab" cursor="pointer"/>
+                <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:173px;height:1px;padding-top:473px;margin-left:2032px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                        <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">
+                            CHEMISTRY LAB.
+                          </font>
+                        </div>
+                      </div>
+                    </div>
+                  </foreignObject>
+                </switch>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M1897.41 847.29h61.18v-5h-61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1958.59 842.29c0-33.79-27.39-61.18-61.18-61.18v61.18" pointer-events="none"/>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M2338.59 847.29h-61.18v-5h61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2277.41 842.29c0-33.79 27.39-61.18 61.18-61.18v61.18" pointer-events="none"/>
+              </g>
+              
+              <!-- PHYSICS LAB. -->
+              <g>
+                <path fill="#FFF" stroke="#000" stroke-width="10" d="M2368 102.29h500v740h-500z" data-bs-toggle="modal" data-bs-target="#modal-physLab" cursor="pointer"/>
+                <path fill="#fff" stroke="#000" stroke-width="10" d="M2746 517.29h120v330h-120z" pointer-events="none"/>
+                <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:143px;height:1px;padding-top:468px;margin-left:2547px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                        <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">
+                            PHYSICS LAB.
+                          </font>
+                        </div>
+                      </div>
+                    </div>
+                  </foreignObject>
+                </switch>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M2397.41 848.29h61.18v-5h-61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2458.59 843.29c0-33.79-27.39-61.18-61.18-61.18v61.18" pointer-events="none"/>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M2838.59 848.29h-61.18v-5h61.18z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2777.41 843.29c0-33.79 27.39-61.18 61.18-61.18v61.18" pointer-events="none"/>
+                <path fill="#fff" stroke="#000" stroke-width="2" d="M2864 134.37v41.84h5v-41.84z" pointer-events="none"/>
+                <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2869 176.21c23.1 0 41.84-18.73 41.84-41.84H2869" pointer-events="none"/>
+            </g>
+
+            <!-- 5201 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M2363 1493.29h500v269.92h-500z" data-bs-toggle="modal" data-bs-target="#modal-R5201" cursor="pointer"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2378 1491.29h61.18v5H2378z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2439.18 1496.29a61.18 61.18 0 0 1-61.18 61.18v-61.18" pointer-events="none"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1627px;margin-left:2548px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5201
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2835.18 1491.29H2774v5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2774 1496.29a61.18 61.18 0 0 0 61.18 61.18v-61.18" pointer-events="none"/>
+            </g>
+            
+            <!-- 5202 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M2363.1 1016.29h500v269.92h-500z" data-bs-toggle="modal" data-bs-target="#modal-R5202" cursor="pointer"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2834 1287.21h-61.18v-5H2834z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2772.82 1282.21a61.18 61.18 0 0 1 61.18-61.18v61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2374 1287.21h61.18v-5H2374z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2435.18 1282.21a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1154px;margin-left:2541px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <span style="font-size:20px">
+                          5202
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+            </g>
+
+            <!-- 5203 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M1863 1493.29h500v269.92h-500z" data-bs-toggle="modal" data-bs-target="#modal-R5203" cursor="pointer"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2349.18 1491.29H2288v5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2288 1496.29a61.18 61.18 0 0 0 61.18 61.18v-61.18" pointer-events="none"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1627px;margin-left:2048px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5203
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1887.41 1492.29h61.18v5h-61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1948.59 1497.29a61.18 61.18 0 0 1-61.18 61.18v-61.18" pointer-events="none"/>
+            </g>
+
+            <!-- 5204 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M1861 1016.29h500v269.92h-500z" data-bs-toggle="modal" data-bs-target="#modal-R5204" cursor="pointer"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1153px;margin-left:2047px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5204
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1885.41 1286.21h61.18v-5h-61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1946.59 1281.21a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2336.59 1286.21h-61.18v-5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2275.41 1281.21a61.18 61.18 0 0 1 61.18-61.18v61.18" pointer-events="none"/>
+            </g>
+
+            <!-- 5205 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M1363 1493.29h500v269.92h-500z" data-bs-toggle="modal" data-bs-target="#modal-R5205" cursor="pointer"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1628px;margin-left:1549px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5205
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1387.66 1493.29h61.18v5h-61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1448.84 1498.29a61.18 61.18 0 0 1-61.18 61.18v-61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1838.34 1493.29h-61.18v5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1777.16 1498.29a61.18 61.18 0 0 0 61.18 61.18v-61.18" pointer-events="none"/>
+            </g>
+
+            <!-- 5206 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M1361 1016.29h500v269.92h-500z" data-bs-toggle="modal" data-bs-target="#modal-R5206" cursor="pointer"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1151px;margin-left:1547px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5206
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1385.41 1286.21h61.18v-5h-61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1446.59 1281.21a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1836.59 1286.21h-61.18v-5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1775.41 1281.21a61.18 61.18 0 0 1 61.18-61.18v61.18" pointer-events="none"/>
+            </g>
+           
+            <!-- 5207 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M863 1493.29h500v269.92H863z" data-bs-toggle="modal" data-bs-target="#modal-R5207" cursor="pointer"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1628px;margin-left:1049px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5207
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M887.66 1493.29h61.18v5h-61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M948.84 1498.29a61.18 61.18 0 0 1-61.18 61.18v-61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1338.34 1493.29h-61.18v5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1277.16 1498.29a61.18 61.18 0 0 0 61.18 61.18v-61.18" pointer-events="none"/>
+            </g>
+
+            <!-- 5208 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M861 1016.29h500v269.92H861z" data-bs-toggle="modal" data-bs-target="#modal-R5208" cursor="pointer"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:258px;height:1px;padding-top:1153px;margin-left:982px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5208
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+                <text x="1111" y="1156" font-family="Helvetica" font-size="12" font-weight="bold" text-anchor="middle">5208</text>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M885.41 1287.21h61.18v-5h-61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M946.59 1282.21a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1336.59 1287.21h-61.18v-5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1275.41 1282.21a61.18 61.18 0 0 1 61.18-61.18v61.18" pointer-events="none"/>
+            </g>
+
+            <!-- 5209 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M363 1493.29h500v269.92H363z" data-bs-toggle="modal" data-bs-target="#modal-R5209" cursor="pointer"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M380 1490.29h61.18v5H380z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M441.18 1495.29a61.18 61.18 0 0 1-61.18 61.18v-61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M836.18 1490.29H775v5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M775 1495.29a61.18 61.18 0 0 0 61.18 61.18v-61.18" pointer-events="none"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1627px;margin-left:549px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5209
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+            </g>
+
+            <!-- 5210 -->
+            <g>
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M369 1016.29h500v269.92H369z" data-bs-toggle="modal" data-bs-target="#modal-R5210" cursor="pointer"/>
+              <switch transform="translate(-.5 -.5)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:1151px;margin-left:555px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          5210
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M393.41 1288.21h61.18v-5h-61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M454.59 1283.21a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none"/>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M844.59 1286.21h-61.18v-5h61.18z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M783.41 1281.21a61.18 61.18 0 0 1 61.18-61.18v61.18" pointer-events="none"/>
+            </g>
+            
+            <circle cx="178" cy="488.29" r="25" fill="#c00" pointer-events="none"/>
+
+
+            
+            <!-- Stairs -->
+            <g id="stairs">
+              <path fill="#FFF" stroke="#000" stroke-width="5" d="M368 665.29v620H250v-620z" pointer-events="none"/>
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M368 690.29H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250m118 25H250M309 665.29v620m59-25-59 25-59-25" pointer-events="none"/>
+              <path fill="#FFF" d="M323 1070.29v-260h30v260z" pointer-events="none"/>
+              <switch transform="rotate(-90 337.5 940.29)">
+                <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:258px;height:1px;padding-top:940px;margin-left:209px">
+                    <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                        <font style="font-size:20px">
+                          GO TO SECOND FLOOR
+                        </font>
+                      </div>
+                    </div>
+                  </div>
+                </foreignObject>
+                <text x="338" y="944" font-family="Helvetica" font-size="12" font-weight="bold" text-anchor="middle">GO TO SECOND FLOOR</text>
+              </switch>
+            </g>
+
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="462.5" y="371.79" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="712.5" y="371.21" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="1087.5" y="372.29" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="1587.5" y="374.21" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="2087.5" y="372.21" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="2587.5" y="368.29" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="2573.5" y="1534.79" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="2574.6" y="1063.79" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="2073.5" y="1534.79" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="2080.5" y="1062.79" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="1582.5" y="1532.74" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="1580.5" y="1062.79" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="1082.5" y="1532.74" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="1080.5" y="1058.74" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="582.5" y="1532.74" pointer-events="none" preserveAspectRatio="none"/>
+            <image href="../imgs/pin.png" class="pin" width="60" height="60" x="588.5" y="1062.79" pointer-events="none" preserveAspectRatio="none"/>
+
+            <path fill="none" class="path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M178 513.29v407h320v-80" pointer-events="none"/>
+            <path fill="none" class="path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M178 513.29v407h630v-80" pointer-events="none"/>
+            <path fill="none" class="path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M178 513.29v407L924 922v-73.21" pointer-events="none"/>
+            <path fill="none" class="path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M178 513.29v407h1240v-80" pointer-events="none"/>
+            <path fill="none" class="path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M178 513.29v407h1740v-80" pointer-events="none"/>
+            <path fill="none" class="path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M178 513.29v407h2240v-80" pointer-events="none"/>
+            
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M198 485.29h80v900l2048 .13h66l.32 110.62" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M198 485.29h80v900l2048 .13h66v-103.53" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M188 484.76h90v900l1568 .13h66l-.55 112.86" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M188 485.29h90v900l1568 .13h66v-103.53" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M198 484.76h80v900l1066 .13h66l.11 112.56" pointer-events="none"/>
+            
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M198 485.29h80v900l1066 .13h66v-103.53" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="m202 484.76 76 .13v900h626l-.03 114.9" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="m202 485.16 76 .13v900h626v-103.53" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M199 485.29h80v900h140v110" pointer-events="none"/>
+            <path fill="none" class="second path" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M198 485.29h80v900h140l.19-100.46" pointer-events="none"/>
+
+            
+            <!-- <path stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M2 1852V2h3214v1850ZM12 12v1830h3194V12Z" pointer-events="none"/> -->
+
+            <circle cx="2992.5" cy="96.5" r="66.5" fill="#f99" pointer-events="none"/>
+            <switch transform="translate(-.5 -.5)">
+              <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:131px;height:1px;padding-top:97px;margin-left:2927px">
+                  <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div style="display:inline-block;font-size:11px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
+                      <font style="font-size:20px">
+                        <b>
+                          1ST FLOOR
+                        </b>
+                      </font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+            </switch>
+            <circle cx="2987.5" cy="1015.5" r="66.5" fill="#f99" pointer-events="none"/>
+            <switch transform="translate(-.5 -.5)">
+              <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:131px;height:1px;padding-top:1016px;margin-left:2922px">
+                  <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div style="display:inline-block;font-size:11px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
+                      <font style="font-size:20px">
+                        <b>
+                          2ND FLOOR
+                        </b>
+                      </font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+            </switch>
+
+            <switch transform="rotate(90 2978 492.96)">
+              <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:493px;margin-left:2949px">
+                  <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                      <font style="font-size:20px">
+                        EXIT
+                      </font>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+            </switch>
+            
+            <switch transform="translate(-.5 -.5)">
+              <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:433px;margin-left:119px">
+                  <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                    <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                      <span style="font-size:20px">
+                        ENTRANCE
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </foreignObject>
+            </switch>
+          </svg>
+          
+
+        <div class="modal vw-100" id="modal-radTech">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>RADIOLOGICAL TECHNOLOGY LAB.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="deansOff.jpg" alt="" class="img-fluid">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="radTech-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="radTech-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade vw-100" id="vtmodal-radTech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-nutriLab">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>NUTRITION LAB.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="nutriLab-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="nutriLab-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-nutriLab" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-bioLab">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>BIOLOGY LAB.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="bioLab-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="bioLab-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-zooLab">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ZOOLOGY LAB.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="zooLab-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="zooLab-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-chemLab">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>CHEMISTRY LAB.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="chemLab-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="chemLab-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-physLab">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>PHYSICS LAB.</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="physLab-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="physLab-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5201">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5201</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5201-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5201-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-5201" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal vw-100" id="modal-R5202">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5202</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5202-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5202-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5203">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5203</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5203-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5203-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5204">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5204</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5204-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5204-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5205">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5205</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5205-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5205-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5206">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5206</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5206-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5206-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5207">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5207</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5207-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5207-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5208">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5208</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5208-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5208-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5209">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5209</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5209-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5209-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal vw-100" id="modal-R5210">
+            <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>ROOM 5210</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img src="" alt="" class="img-fluid mb-3">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                    <button type="button" id="R5210-navbtn" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                    <button type="button" id="R5210-vtbtn" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-radtech">Virtual Tour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal fade" id="vtmodal-radtech" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body image-container" id="imgCont">
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </main>
+    <!-- end: Main -->
+
+    <!-- start: JS -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../assets/js/B5-Script.js"></script>
+    <!-- end: JS -->
+</body>
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="../js/script.js"></script>
+</html>

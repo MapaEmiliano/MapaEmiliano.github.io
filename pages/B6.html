@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- start: Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- start: Icons -->
+    <!-- start: CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- end: CSS -->
+    <title>Mapa-Emiliano</title>
+</head>
+
+<body>
+
+    <!-- start: Sidebar -->
+    <div class="sidebar position-fixed top-0 bottom-0 bg-main border-end ">
+        <div class="d-flex align-items-center p-3 text-light">
+            <a href="#" class="sidebar-logo text-uppercase fw-bold text-decoration-none text-light fs-4">Mapa-Emilano</a>
+            <i class="sidebar-toggle bi-map-fill ms-auto fs-5 d-none d-md-block"></i>
+        </div>
+        <ul class="sidebar-menu p-3 mb-5">
+            <li class="sidebar-menu-item">
+                <a href="home.html" class="fw-bold">
+                    <i class="bi-house sidebar-menu-item-icon"></i>
+                    HOME
+                </a>
+            </li>
+            <li class="sidebar-menu-item active">
+                <a href="#" class="list-group-item fw-bold pe-none w-100"><i class=" fa-sm sidebar-menu-item-icon">B6</i> <span class="d-none d-sm-inline"> Building Six</span></a>
+            </li>
+            <hr style="color: white;">
+
+            <li class="sidebar-menu-item has-dropdown ">
+                <a href="#">
+                    <i class="sidebar-menu-item-icon">F1</i>
+                    First Floor
+                    <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                </a>
+                <ul class="sidebar-dropdown-menu">
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Canteen
+                        </a>
+                    </li>
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                            Al-Fresco
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            
+            <li class="sidebar-menu-item has-dropdown">
+                <a href="#" class="foor">
+                    <i class="sidebar-menu-item-icon">F2</i>
+                    Second Floor
+                    <i class="ri-arrow-down-s-line sidebar-menu-item-accordion ms-auto"></i>
+                </a>
+                <ul class="sidebar-dropdown-menu">
+                    <li class="sidebar-dropdown-menu-item">
+                        <a href="#" class="locate">
+                          Multi-Purpose Hall
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+           
+            
+            
+
+    </div>
+    <div class="sidebar-overlay"></div>
+    <!-- end: Sidebar -->
+
+    <!-- start: Main -->
+    <main class="bg-light">
+        <div class="p-2">
+            <!-- start: Navbar -->
+            <nav class="px-3 py-2 bg-main rounded shadow d-flex">
+                <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                <h5 class="fw-bold mb-0 me-auto text-light">Interactive School Map</h5>
+
+                <div class="d-flex mode">
+                    <button type="button" class="active btn btn-sm me-2 text-light" data-bs-target="iframe" id="show-btn">
+                        <i class="fa-solid">2D</i>
+                    </button>
+                    <button type="button" class="btn btn-sm ms-2 me-2 text-light" data-bs-toggle="modal" data-bs-target="#vtmodal-B5">
+                        <i class="fa-solid">VT</i>
+                    </button>
+  
+                    <button type="button" class="btn btn-sm text-light" data-bs-target="iframe" id="show-btn">
+                        <i class="fa-sharp fa-solid fa-robot"></i>
+                    </button>
+                      <button type="button" class="btn btn-sm ms-2 me-2 volume-btn active text-light" id="volume-btn">
+                      <i class="fa-sharp fa-solid fa-volume-high"></i>
+                  </button>
+                </div>
+            </nav>
+            <!-- end: Navbar -->
+        </div>
+
+
+
+        <!-- <div class="mainCont gx-0">
+            <iframe src="https://jzhmrtn.github.io/" frameborder="0" allowfullscreen width="100%" height="100%"></iframe>
+        </div> -->
+        <div class="maincont">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="background-color:#fff" viewBox="-0.5 -0.5 3315 1943">
+              <path fill="#FFF" stroke="#000" stroke-width="15" d="M7.41 7h3300v1927H7.41z" pointer-events="all" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10" d="M354 1564v-80" pointer-events="stroke" />
+              <path fill="none" stroke="#000" stroke-width="15" d="M230 1103h2011.41v640H230z" pointer-events="all" />
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2087.2 796.71v-227h119.62v227z" pointer-events="all" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2087.2 771.71h119.62m-119.62-25h119.62m-119.62-25h119.62m-119.62-25h119.62m-119.62-25h119.62m-119.62-25h119.62m-119.62-25h119.62m-119.62-25h119.62m-119.62-25h119.62M2147.01 796.71v-227m-59.81 25 59.81-25 59.81 25" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="10" d="M2216.82 93.71h570v841.5h-570v-10h560v-821.5h-560Z" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" d="M661.82 556.75v272.92h-315V556.75h10v262.92h295V556.75Z" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" d="M966.82 556.75v272.92h-315V556.75h10v262.92h295V556.75Z" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" d="M1266.82 556.75v272.92h-315V556.75h10v262.92h295V556.75ZM1744.91 556.75v272.92h-315V556.75h10v262.92h295V556.75Z" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" d="M2086.82 556.75v272.92h-355V556.75h10v262.92h335V556.75Z" pointer-events="all" />
+              <path stroke="#000" stroke-width="10" d="M196.82 925.71h2050v10h-2050z" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="10" d="M216.82 427.42v-260h2000v260h-10v-250h-1980v250Z" pointer-events="all" />
+              
+              <!-- CANTEEN -->
+                  <path fill="#fff" stroke="#000" stroke-width="2" d="M376.82 829.67H438v-5h-61.18z" pointer-events="all" />
+                  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M438 824.67a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="all" />
+                  <path fill="#fff" stroke="#000" stroke-width="2" d="M686.82 829.67H748v-5h-61.18z" pointer-events="all" />
+                  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M748 824.67a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="all" />
+                  <path fill="#fff" stroke="#000" stroke-width="2" d="M1636.82 829.67H1698v-5h-61.18z" pointer-events="all" />
+                  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1698 824.67a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="all" />
+                  
+                  <g data-bs-toggle="modal" data-bs-target="#modal-canteen" cursor="pointer" >
+                      <path fill="#fff" d="M342.82 384.28h514v67.02h-514z"/>
+                      <switch transform="translate(-.5 -.5)">
+                          <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                          <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:512px;height:1px;padding-top:418px;margin-left:344px">
+                              <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                              <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;overflow-wrap:normal">
+                                  <font style="font-size:30px; letter-spacing: 40px;">CANTEEN</font>
+                              </div>
+                              </div>
+                          </div>
+                          </foreignObject>
+                      </switch>
+                  </g>
+
+               <!-- AL-FRESCO -->
+              <g data-bs-toggle="modal" data-bs-target="#modal-alFresco" cursor="pointer">
+                  <path fill="#fff" d="M2316.82 219.71h770v607.07h-770z" />
+                  <path stroke="#000" stroke-miterlimit="10" stroke-width="10" d="M2316.82 209.71h780v610h-780v-10h770v-590h-770Z" pointer-events="all" />
+                  <path fill="none" d="M2598.98 458.12h205.68v85.76h-205.68z" pointer-events="all" />
+                  <switch transform="translate(-.5 -.5)">
+                      <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                      <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:204px;height:1px;padding-top:501px;margin-left:2600px">
+                          <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                          <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;overflow-wrap:normal">
+                              <font style="font-size:30px">AL-FRESCO</font>
+                          </div>
+                          </div>
+                      </div>
+                      </foreignObject>
+                  </switch>
+              </g>
+              
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1162.82 829.67H1224v-5h-61.18z" pointer-events="all" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1224 824.67a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="all" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3" d="m357.4 607.04 902.48-1m.02 25.33-902.48 1.01m902.48-1.01" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M220.82 831.71V558.75h129.62v10H230.82v262.96Z" pointer-events="all" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="3" d="m1438.09 606.04 302.93-.82m.06 25.33-302.93.83m302.93-.83" pointer-events="all" />
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M2083.82 558.75H2220v270h-10v-260h-126.18Z" pointer-events="all" />
+              <path stroke="#000" stroke-width="5" d="M2216.82 91.7v127.07h-10V91.7z" pointer-events="all" />
+              <path fill="#fff" stroke="#000" stroke-width="10" d="M226.82 177.42h116v250h-116z" pointer-events="none" />
+              <switch transform="rotate(90 284.82 289.68)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:290px;margin-left:221px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <span style="font-size:20px">CR FEMALE</span>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M239.82 429.42H301v-5h-61.18z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M301 424.42a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none" />
+              <path fill="#fff" stroke="#000" stroke-width="10" d="M1974.82 177.42h116v250h-116z" pointer-events="none" />
+              <switch transform="rotate(90 2034.32 287.01)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:111px;height:1px;padding-top:288px;margin-left:1979px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <span style="font-size:20px">PWD CR</span>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1987.82 429.42H2049v-5h-61.18z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2049 424.42a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none" />
+              
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:88px;height:1px;padding-top:695px;margin-left:460px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">STORE 1</font>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:88px;height:1px;padding-top:695px;margin-left:765px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">STORE 2</font>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:88px;height:1px;padding-top:695px;margin-left:1065px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">STORE 3</font>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:88px;height:1px;padding-top:693px;margin-left:1543px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">
+                          <b>STORE 4</b>
+                          </font>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1909.16 828.67h-122.35v-5h122.35z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1847.99 828.67v-5m0 0c0-16.22 6.44-31.78 17.91-43.26a61.215 61.215 0 0 1 43.26-17.92v61.18m-61.17 0c0-33.79-27.39-61.18-61.18-61.18v61.18" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="10" d="m1265.82 825.42 166.87-.2" pointer-events="none" />
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1410.16 829.78h-122.35v-5h122.35z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1348.99 829.78v-5m0 0c0-16.22 6.44-31.78 17.91-43.26a61.206 61.206 0 0 1 43.26-17.91v61.17m-61.17 0c0-33.79-27.39-61.17-61.18-61.17v61.17" pointer-events="none" />
+              <circle cx="155" cy="497.92" r="25" fill="#c00" pointer-events="none" />
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:58px;height:1px;padding-top:437px;margin-left:103px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <span style="font-size:20px">ENTRANCE</span>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+                  <text x="132" y="441" font-family="Helvetica" font-size="12" font-weight="bold" text-anchor="middle">ENTRANCE</text>
+              </switch>
+              
+              <path fill="#fff" stroke="#000" stroke-width="10" d="M2094.82 177.42h116v250h-116z" pointer-events="none" />
+              <switch transform="rotate(90 2152.82 289.68)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:128px;height:1px;padding-top:290px;margin-left:2089px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <span style="font-size:20px">CR MALE</span>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2107.82 429.42H2169v-5h-61.18z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2169 424.42a61.18 61.18 0 0 0-61.18-61.18v61.18" pointer-events="none" />
+              <circle cx="3100.5" cy="214.5" r="66.5" fill="#f99" pointer-events="none" />
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:131px;height:1px;padding-top:215px;margin-left:3035px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:11px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px; font-weight: 900;"> 1ST FLOOR
+                          </font>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M531.82 1103v381H350v-10h171.82v-371Z" pointer-events="none" />
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="10" d="M2236.82 1003h580v841.5h-580v-10h570V1013h-570Z" pointer-events="none" />
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2121.82 1736v-252h115v252z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2121.82 1711h115m-115-25h115m-115-25h115m-115-25h115m-115-25h115m-115-25h115m-115-25h115m-115-25h115m-115-25h115m-115-25h115M2179.32 1736v-252m-57.5 25 57.5-25 57.5 25" pointer-events="none" />
+              <path stroke="#000" stroke-width="10" d="M226.82 1834h2050v10h-2050z" pointer-events="none" />
+              <path fill="#fff" d="M2316.82 1095.72h740v600h-740z" pointer-events="none" />
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="10" d="M2286.82 1095h780v610h-780v-10h770v-590h-770Z" pointer-events="none" />
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M527.72 1295v-160h5v160z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M527.72 1215h5m0 0c44.18 0 80 35.82 80 80h-80m0-80c44.18 0 80-35.82 80-80h-80" pointer-events="none" />
+              
+              <g>
+              <path fill="#fff" d="M990 1195.28h514v95.02h-514z" data-bs-toggle="modal" data-bs-target="#modal-multiPH" cursor="pointer" ></path>
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left;" >
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1179px;height:1px;padding-top:1260px;margin-left:646px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:30px; letter-spacing: 60px;">MULTI-PURPOSE HALL</font>
+                          
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+                  
+              </switch>               
+              </g>
+              
+              
+              <circle cx="3076.5" cy="1104" r="66.5" fill="#f99" pointer-events="none" />
+              
+              
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:131px;height:1px;padding-top:1104px;margin-left:3011px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:11px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px; font-weight: 900;">2ND FLOOR
+                          </font>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+
+              <g id="stairs">
+              <path fill="#FFF" stroke="#000" stroke-width="5" d="M350.44 562.71V1484h-118V562.71z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M350.44 587.71h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118m118 25h-118M291.44 562.71V1484m59-25-59 25-59-25" pointer-events="none" />
+              <path fill="#FFF" d="M305 1018.71v-260h30v260z" pointer-events="none" />
+              <switch transform="rotate(-90 319.5 888.71)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:258px;height:1px;padding-top:889px;margin-left:191px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <font style="font-size:20px">GO TO SECOND FLOOR</font>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              </g>
+              
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M527.72 1554.15v186.01H354.1v-186.01z" pointer-events="none" />
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M370.01 1551.21h61.18v5h-61.18z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M431.19 1556.21a61.18 61.18 0 0 1-61.18 61.18v-61.18" pointer-events="none" />
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:88px;height:1px;padding-top:1647px;margin-left:397px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <span style="font-size:20px">ROOM NAME</span>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+                  <text x="441" y="1651" font-family="Helvetica" font-size="12" font-weight="bold" text-anchor="middle">ROOM NAME</text>
+              </switch>
+
+              <path stroke="#000" stroke-miterlimit="10" stroke-width="5" d="M2004 1109.6v374.39h116v-10h-106V1109.6Z" pointer-events="none" />
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M2013.41 1135v160h-5v-160z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M2013.41 1215h-5m0 0c-44.18 0-80-35.82-80-80h80m0 80c-44.18 0-80 35.82-80 80h80" pointer-events="none" />
+              <path fill="#FFF" stroke="#000" stroke-width="10" d="M2120.12 1471.16v268.71h-260.97v-268.71z" pointer-events="none" />
+              <path fill="#fff" stroke="#000" stroke-width="2" d="M1878.73 1469.03h61.18v5h-61.18z" pointer-events="none" />
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M1939.91 1474.03a61.18 61.18 0 0 1-61.18 61.18v-61.18" pointer-events="none" />
+              <switch transform="translate(-.5 -.5)">
+                  <foreignObject width="100%" height="100%" pointer-events="none" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow:visible;text-align:left">
+                  <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:133px;height:1px;padding-top:1566px;margin-left:1904px">
+                      <div data-drawio-colors="color: rgb(0, 0, 0);" style="box-sizing:border-box;font-size:0;text-align:center">
+                      <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:normal;overflow-wrap:normal">
+                          <span style="font-size:20px">ROOM NAME</span>
+                      </div>
+                      </div>
+                  </div>
+                  </foreignObject>
+              </switch>
+              
+              <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="15" d="m2118.74 1739.12-.77-268.24" pointer-events="none" />
+
+              <image href="../imgs/pin.png" class="pin" width="60" height="60" x="549.5" y="301.96" preserveAspectRatio="none" />
+              <image href="../imgs/pin.png" class="pin" width="60" height="60" x="2671.32" y="412.42" preserveAspectRatio="none" />
+              <image href="../imgs/pin.png" class="pin" width="60" height="60" x="1191.32" y="1155.67" pointer-events="none" preserveAspectRatio="none" />
+
+              <path class="path" fill="none" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M180 497.92 420 496v-50M180" pointer-events="none" />
+              <path class="path" fill="none" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M180 497.95l2418.98 2.93" pointer-events="none" />
+              <path class="path second" fill="none" stroke="#c00" stroke-miterlimit="10" stroke-width="10" d="M155 522.92V864h105v390l385.25 5.76" pointer-events="none" />
+              </svg>
+
+      <div class="modal vw-100" id="modal-canteen">
+          <div class="modal-dialog modal-dialog-centered" >
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5>CANTEEN</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <img src="deansOff.jpg" alt="" class="img-fluid">
+      
+                  <div class="modal-footer d-flex justify-content-center gap-5">
+                  <button type="button" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                  <button type="button" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-canteen">Virtual Tour</button>
+                  </div>
+              </div>
+              </div>
+          </div>
+          </div>
+      
+          <div class="modal fade vw-100" id="vtmodal-radTech" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5>Virtual Tour</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+                  <div class="modal-body image-container" id="imgCont">
+                  </div>
+              </div>
+              </div>
+          </div>
+          </div>
+
+          <div class="modal vw-100" id="modal-alFresco">
+              <div class="modal-dialog modal-dialog-centered" >
+                  <div class="modal-content">
+                  <div class="modal-header">
+                      <h5>AL-FRESCO</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <img src="deansOff.jpg" alt="" class="img-fluid">
+          
+                      <div class="modal-footer d-flex justify-content-center gap-5">
+                      <button type="button" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                      <button type="button" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-alFresco">Virtual Tour</button>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+          
+              <div class="modal fade vw-100" id="vtmodal-radTech" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                  <div class="modal-content">
+                  <div class="modal-header">
+                      <h5>Virtual Tour</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                      <div class="modal-body image-container" id="imgCont">
+                      </div>
+                  </div>
+                  </div>
+              </div>
+              </div>
+
+              <div class="modal vw-100" id="modal-multiPH">
+                  <div class="modal-dialog modal-dialog-centered" >
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <h5>MULTI-PURPOSE HALL</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="deansOff.jpg" alt="" class="img-fluid">
+              
+                          <div class="modal-footer d-flex justify-content-center gap-5">
+                          <button type="button" class="btn btn-danger modal-btn navigateBtn" data-bs-dismiss="modal">Navigate</button>
+                          <button type="button" class="btn btn-success modal-btn" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#vtmodal-multiPH">Virtual Tour</button>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                  </div>
+              
+                  <div class="modal fade vw-100" id="vtmodal-radTech" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                          <h5>Virtual Tour</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                          <div class="modal-body image-container" id="imgCont">
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                  </div>
+
+       
+    </main>
+    <!-- end: Main -->
+
+    <!-- start: JS -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../assets/js/B6-Script.js"></script>
+    <!-- end: JS -->
+</body>
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="../js/script.js"></script>
+</html>
